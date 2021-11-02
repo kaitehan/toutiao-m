@@ -7,8 +7,8 @@
     left-arrow
     @click-left="$router.back()">
     </van-nav-bar>
-    <!-- /导航栏 -->
-    <input type="file"  ref="imgRef" hidden @change="onFileChange">
+    <!-- /导航栏 capture="camera"  -->
+    <input type="file" accept="image/*" ref="imgRef" hidden @change="onFileChange">
 
     <!-- 个人信息 -->
     <van-cell-group>

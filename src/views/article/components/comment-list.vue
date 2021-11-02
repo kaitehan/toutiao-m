@@ -67,7 +67,7 @@ export default {
           offset: this.offset, // 获取评论数据的偏移量，值为评论id，表示从此id的数据向后取，不传表示从第一页开始读取数据
           limit: this.limit // 获取的评论数据个数，不传表示采用后端服务设定的默认每页数据量
         })
-        console.log(res)
+        // console.log(res)
         // 2.将数据添加到列表中
         const { results } = res.data
 

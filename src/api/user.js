@@ -10,6 +10,13 @@ export const login = data => {
     data
   })
 }
+// 刷新token
+export const refreshToken = () => {
+  return request({
+    method: 'PUT',
+    url: '/v1_0/authorizations'
+  })
+}
 
 // 发送验证码
 // 注意：每个手机号每分钟1次

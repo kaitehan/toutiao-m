@@ -215,7 +215,7 @@ export default {
     onClosePops (data) {
       // 关闭弹出层
       this.isPostShow = false
-
+      this.totalCommentCount++
       // 将发布内容显示到列表顶部
       this.commentList.unshift(data.new_obj)
     }

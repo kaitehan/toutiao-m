@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 
 import { setItem, getItem } from '@/utils/storage'
+import { refreshToken } from '@/api/user'
 Vue.use(Vuex)
 
 const TOKEN_KEY = 'TOUTIAO_USER'
@@ -20,6 +21,19 @@ export default new Vuex.Store({
     }
   },
   actions: {
+    async refreshUser (context) {
+      try {
+        const { data: res } = await refreshToken()
+        const temp = context.state.user
+        temp.token = res.data.token
+        // console.log(res)
+        // temp.token = '1111'
+        context.commit('setUser', temp)
+        return temp.token
+      } catch (err) {
+        return '更新token失败'
+      }
+    }
   },
   modules: {
   }

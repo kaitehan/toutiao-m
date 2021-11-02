@@ -112,7 +112,7 @@ export default {
       try {
         const { data: res } = await getUserInfo()
         this.userInfo = res.data
-        console.log(res)
+        // console.log(res)
       } catch (err) {
         this.$toast('获取用户信息失败，请稍后再试！')
       }
@@ -173,6 +173,15 @@ export default {
           font-size: 30px;
           color: #fff;
         }
+      }
+      .right{
+        .van-button--default{
+          border: none;
+          background-color: lightblue;
+          color: #fff;
+
+        }
+
       }
     }
     .base-status{

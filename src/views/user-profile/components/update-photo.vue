@@ -84,7 +84,6 @@ export default {
       // 画布图片可以移动
       movable: true
     })
-    console.log(this.cropper)
   }
 
 }

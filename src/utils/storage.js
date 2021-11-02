@@ -1,5 +1,5 @@
 // 封装本地存储操作模块
-
+// import { refreshToken } from '@/api/user'
 // 存储数据
 export const setItem = (key, value) => {
   // 将数组或者对象类型的数据转换为JSON 格式字符串进行存储
@@ -24,3 +24,9 @@ export const getItem = key => {
 export const removeItem = key => {
   window.localStorage.removeItem(key)
 }
+
+// // 更新数据
+// export const refreshItem = async () => {
+//   const data = await refreshToken()
+//   console.log(data)
+// }
